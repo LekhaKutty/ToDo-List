@@ -8,14 +8,17 @@ class Todo extends Component {
             time: ""
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(e) {
         this.setState({[e.target.name]:e.target.value});
-        console.log(this.state);
+       // console.log(this.state);
     }
     handleSubmit(e) {
-        
+        //console.log(this.state);
+        this.props.todoaddfunction(this.state);
+        e.preventDefault();
     }
     render() {
         return(
@@ -31,7 +34,6 @@ class Todo extends Component {
                     </div>
                     <p><button type="submit" className="btn btn-primary">Add task</button></p>
                 </form>
-            
             </div>
         )
     }

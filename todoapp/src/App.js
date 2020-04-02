@@ -1,5 +1,5 @@
 import React from 'react';
-import Todo from './components/Todo';
+//import Todo from './components/Todo';
 import TodoList from './components/TodoList';
 function App() {
   return (
@@ -7,8 +7,9 @@ function App() {
       <div className="container mt-5">
         <h1 className="mb-5">To Do App</h1>
         <div className="row">
-          < Todo />
-          < TodoList />
+          
+          <TodoList />
+         
         </div>
         
       </div>
